@@ -1,17 +1,23 @@
 # srrg_gl_helpers
 
-This package contains miscellaneous utilities to draw stuff in opengl,
-such as ellipses, triangles, cubes, reference systems and so on.
-It is a standalone lib, and only depends on opengl.
+This package contains miscellaneous utilities to draw stuff in **opengl**,
+such as _ellipses_, _triangles_, _cubes_, _reference systems_ and so on.
+
+It is a standalone lib, and only depends on `opengl`.
 
 ## Setting up
-Just copy the node in your ros_package_path and do cmakelists.txt
+Just copy the node in your ros_package_path and compile.
+
 All functions are specified in the header and they do what you expect them to do.
-glDrawEllipse(...) draws an ellipse, and so on.
+
+`glDrawEllipse(...)` draws an ellipse, and so on.
 
 ## Authors
 
-** Giorgio Grisetti, Rainer Kuemmerle, Jacopo Serafin, Mayte Lazaro
+* Giorgio Grisetti
+* Rainer Kuemmerle
+* Jacopo Serafin
+* Mayte Lazaro
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
