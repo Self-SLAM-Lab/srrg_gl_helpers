@@ -173,6 +173,54 @@ namespace srrg_gl_helpers {
     glEnd();
   }
 
+  void drawBoxWireframe(GLfloat l, GLfloat w, GLfloat h) {
+    GLfloat sx = l*0.5f;
+    GLfloat sy = w*0.5f;
+    GLfloat sz = h*0.5f;
+
+    glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
+    glBegin(GL_QUADS);
+    // bottom
+    glNormal3f( 0.0f, 0.0f,-1.0f);
+    glVertex3f(-sx, -sy, -sz);
+    glVertex3f(-sx, sy, -sz);
+    glVertex3f(sx, sy, -sz);
+    glVertex3f(sx, -sy, -sz);
+    // top
+    glNormal3f( 0.0f, 0.0f,1.0f);
+    glVertex3f(-sx, -sy, sz);
+    glVertex3f(-sx, sy, sz);
+    glVertex3f(sx, sy, sz);
+    glVertex3f(sx, -sy, sz);
+    // back
+    glNormal3f(-1.0f, 0.0f, 0.0f);
+    glVertex3f(-sx, -sy, -sz);
+    glVertex3f(-sx, sy, -sz);
+    glVertex3f(-sx, sy, sz);
+    glVertex3f(-sx, -sy, sz);
+    // front
+    glNormal3f( 1.0f, 0.0f, 0.0f);
+    glVertex3f(sx, -sy, -sz);
+    glVertex3f(sx, sy, -sz);
+    glVertex3f(sx, sy, sz);
+    glVertex3f(sx, -sy, sz);
+    // left
+    glNormal3f( 0.0f, -1.0f, 0.0f);
+    glVertex3f(-sx, -sy, -sz);
+    glVertex3f(sx, -sy, -sz);
+    glVertex3f(sx, -sy, sz);
+    glVertex3f(-sx, -sy, sz);
+    //right
+    glNormal3f( 0.0f, 1.0f, 0.0f);
+    glVertex3f(-sx, sy, -sz);
+    glVertex3f(sx, sy, -sz);
+    glVertex3f(sx, sy, sz);
+    glVertex3f(-sx, sy, sz);
+    glEnd();
+    glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
+
+  }
+
   void drawPlane(GLfloat l, GLfloat w) {
     GLfloat sx = l*0.5f;
     GLfloat sy = w*0.5f;

@@ -46,6 +46,7 @@ namespace srrg_gl_helpers {
    * @param h height of the box (z dimension)
    */
   void drawBox(GLfloat l, GLfloat w, GLfloat h);
+  void drawBoxWireframe(GLfloat l, GLfloat w, GLfloat h);
 
   /**
    * Draw a plane in x-y dimension with a height of zero
